@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Accident Prediction</title>
+    <!-- <link rel="stylesheet" href="p.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='p.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Details for Prediction</h2>
+        <form action="/predict" method="post">
+            <label>Age Band of Driver:</label>
+            <input type="text" name="age_band" required>
+
+            <label>Type of Vehicle:</label>
+            <input type="text" name="vehicle_type" required>
+
+            <label>Road Surface Conditions:</label>
+            <input type="text" name="road_surface" required>
+
+            <label>Light Conditions:</label>
+            <input type="text" name="light_conditions" required>
+
+            <label>Weather Conditions:</label>
+            <input type="text" name="weather" required>
+
+            <label>Collision Type:</label>
+            <input type="text" name="collision_type" required>
+
+            <label>Number of Casualties:</label>
+            <input type="number" name="casualties" required>
+
+            <label>Pedestrian Movement:</label>
+            <input type="text" name="pedestrian_movement" required>
+
+            <label>Hour of the Accident:</label>
+            <input type="number" name="hour" required>
+
+            <label>Day of the Week:</label>
+            <input type="text" name="day_of_week" required>
+
+            <label>Main Cause of Accident:</label>
+            <input type="text" name="cause_of_accident" required>
+
+            <label>Gender of Driver:</label>
+            <input type="text" name="gender" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <h3>Prediction: {{ prediction }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
