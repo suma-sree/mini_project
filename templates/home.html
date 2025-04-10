@@ -1,16 +1,34 @@
-\<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home - Road Accident Prediction</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <title>Road Accident Severity Prediction</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <!-- Corrected path to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}" /></noscript>
 </head>
-<body>
-  <div class="container">
-    <h1>Welcome to the Road Accident Prediction System</h1>
-    <p class="subtitle">Enter accident details to predict severity</p>
-    <a href="/predict_page"><button class="cta-button">Go to Prediction</button></a>
-  </div>
+<body class="landing is-preload">
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <h2>Road Accident Severity Prediction</h2>
+            <p>Click below to predict severity</p>
+            <ul class="actions special">
+                <li><a href="{{ url_for('predict_page') }}" class="button primary">Start Prediction</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Scripts with corrected paths -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

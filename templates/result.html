@@ -1,18 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Prediction Result</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>🚦 Predicted Accident Severity</h1>
-        <div class="result-box">
-            <h2>{{ severity_label }}</h2>
-            <p>{{ severity_description }}</p>
-        </div>
-        <a href="{{ url_for('predict_page') }}" class="back-button">🔙 Try Again</a>
-    </div>
-</body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Spectral by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">        
+    </head>
+	<body class="landing is-preload">
+
+            
+        <section id="two" class="wrapper alt style2">
+        
+            <div class="inner">
+              <header class="major">
+                <h2>Prediction Result</h2>
+                <p>The severity of the accident is: <strong>{{ severity_label }}</strong></p>
+                <p>{{ severity_description }}</p>
+
+              </header>
+              <ul class="actions special">
+                <li><a href="{{ url_for('predict_page') }}" class="button primary">Predict Again</a></li>
+                <li><a href="{{ url_for('home') }}" class="button">Go Home</a></li>
+              </ul>
+            </div>
+          </section>
+	</body>
 </html>
