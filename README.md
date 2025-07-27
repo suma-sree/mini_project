@@ -22,14 +22,17 @@ To classify road accidents as *Minor*, *Serious*, or *Fatal* using structured ac
 - Handled class imbalance using `SMOTE`
 
 ### 🎯 Models Used
-- ✅ Decision Tree (Best performer)
+- ✅ Random Forest Classifier (Best performer)
 - ✅ Support Vector Machine (SVM)
+- ✅ K Nearest Neighbours
 - ✅ Logistic Regression
 
 ### 📊 Evaluation
 - Accuracy Score
+- Recall & Precision (especially the dataset is imbalanced)
 - Confusion Matrix
 - Visualizations using Matplotlib & Seaborn
+- 
 
 ### 💾 Deployment
 - Trained model saved using `pickle`
